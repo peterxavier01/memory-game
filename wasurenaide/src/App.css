@@ -1,0 +1,78 @@
+/*********** App Styles ****************/
+
+.App {
+  max-width: 900px;
+  margin: 1.5em auto;
+  padding: 0 1em;
+}
+
+button {
+  background-color: transparent;
+  border: 2px solid var(--white);
+  padding: 6px 12px;
+  border-radius: 5px;
+  color: var(--white);
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1em;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+  transition: 0.3s all;
+}
+
+/*********** Card Styles ****************/
+.cards-grid {
+  margin: 1.5em 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.card img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+.card {
+  position: relative;
+}
+
+/*********** card front *************/
+.card .card-front {
+  transform: rotateY(90deg);
+  position: absolute;
+  background-color: var(--white);
+  padding: 1em;
+}
+
+.flipped .card-front {
+  transform: rotateY(0deg);
+  transition-delay: 0.3s;
+}
+
+/*********** card cover *************/
+.card .card-cover {
+  transition: all ease-in 0.2s;
+  transition-delay: 0.2s;
+  background-color: var(--white);
+}
+
+.flipped .card-cover {
+  transform: rotateY(90deg);
+  transition-delay: 0s;
+}
+
+@media screen and (max-width: 640px) {
+  .title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .card .card-front {
+    padding: 0.2em;
+  }
+}
